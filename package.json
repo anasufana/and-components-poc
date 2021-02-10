@@ -1,0 +1,41 @@
+{
+  "name": "and-components-poc",
+  "version": "1.0.0",
+  "description": "Component library POC",
+  "main": "index.jsx",
+  "scripts": {
+    "start": "start-storybook -p 6006 --quiet",
+    "build": "build-storybook",
+    "neutrino-start": "webpack-dev-server --mode development --open",
+    "neutrino-build": "webpack --mode production",
+    "lint": "eslint src/ --fix --ext .jsx,.js",
+    "test": "",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anasufana/and-components-poc.git"
+  },
+  "author": "Ana Sufana",
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@neutrinojs/airbnb": "^9.5.0",
+    "@neutrinojs/react-components": "^9.5.0",
+    "@storybook/addon-actions": "^6.1.17",
+    "@storybook/addon-essentials": "^6.1.17",
+    "@storybook/addon-links": "^6.1.17",
+    "@storybook/react": "^6.1.17",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.19.0",
+    "neutrino": "^9.5.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
