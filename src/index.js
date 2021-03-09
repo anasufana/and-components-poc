@@ -1,2 +1,2 @@
-export { Typography } from "./components";
-export { ThemeProvider } from "./components";
+export { Typography } from './components';
+export { ThemeProvider } from './components';

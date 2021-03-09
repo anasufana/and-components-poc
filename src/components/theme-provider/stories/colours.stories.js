@@ -1,15 +1,15 @@
-import React from "react";
-import { Box } from "@material-ui/core";
-import { config, withDesign } from "storybook-addon-designs";
-import Typography from "../../typography";
-import theme from "../theme";
+import React from 'react';
+import { Box } from '@material-ui/core';
+import { config, withDesign } from 'storybook-addon-designs';
+import Typography from '../../typography';
+import theme from '../theme';
 
 const Template = () => {
   console.log(theme.palette);
 
   const { palette } = theme;
   const colourCategories = Object.keys(palette)
-    .filter((item) => typeof palette[item] === "object" && item !== "action")
+    .filter(item => typeof palette[item] === 'object' && item !== 'action')
     .reduce((items, item) => ({ ...items, [item]: palette[item] }), {});
 
   return (
@@ -49,15 +49,15 @@ export const Colour = Template.bind({});
 
 export default {
   component: Colour,
-  title: "Design System/Theme",
+  title: 'Design System/Theme',
   decorators: [withDesign],
 };
 
 Colour.parameters = {
   design: config({
-    type: "figma",
+    type: 'figma',
     url:
-      "https://www.figma.com/file/05z0W1IFiVOnyDYiNqTbAG/AND-Design-System-%E2%80%94-WIP?node-id=1297%3A934",
+      'https://www.figma.com/file/05z0W1IFiVOnyDYiNqTbAG/AND-Design-System-%E2%80%94-WIP?node-id=1297%3A934',
     allowFullscreen: true,
   }),
 };
