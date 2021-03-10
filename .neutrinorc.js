@@ -1,16 +1,16 @@
 const reactComponents = require('@neutrinojs/react-components');
 const airbnb = require('@neutrinojs/airbnb');
+const jest = require('@neutrinojs/jest');
 
 module.exports = {
+  options: {
+    tests: '/src',
+  },
   use: [
     airbnb({
       eslint: {
         baseConfig: {
-          extends: [
-            'eslint:recommended',
-            'plugin:react/recommended',
-            'prettier',
-          ],
+          extends: ['eslint:recommended', 'prettier'],
           rules: {
             'react/jsx-filename-extension': [
               1,
@@ -25,15 +25,18 @@ module.exports = {
             'max-classes-per-file': 'off',
             'react/jsx-curly-newline': 'off',
           },
-          overrides: {
-            files: ['**/*.stories.*'],
-            rules: {
-              'react/prop-types': 'off',
+          overrides: [
+            {
+              files: ['./src/**/*.stories.*'],
+              rules: {
+                'react/prop-types': 'off',
+              },
             },
-          },
+          ],
         },
       },
     }),
     reactComponents(),
+    jest(),
   ],
 };

@@ -5,8 +5,6 @@ import Typography from '../../typography';
 import theme from '../theme';
 
 const Template = () => {
-  console.log(theme.palette);
-
   const { palette } = theme;
   const colourCategories = Object.keys(palette)
     .filter(item => typeof palette[item] === 'object' && item !== 'action')
