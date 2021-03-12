@@ -7,7 +7,7 @@ export const Typography = Template.bind({});
 
 export default {
   component: Typography,
-  title: 'Design System/Components',
+  title: 'Design System/Components/Typography',
   argTypes: {
     variant: {
       control: {
